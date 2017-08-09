@@ -1,0 +1,12 @@
+{
+  "name": "tabs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "* Building npm install jake -g Jake",
+  "main": "Jakefile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
