@@ -1,7 +1,6 @@
 (function () {
     "use strict";
 
-    let EXPECTED_NODE_VERSION = "v6.11.2"
 
     desc("This is the default build")
     task("default", ["version"], function () {
@@ -10,15 +9,17 @@
 
     desc("Check Node version");
     task("version", function () {
-        let actualVersion = process.version;
-        if (actualVersion !== EXPECTED_NODE_VERSION) {
+        var expectedVersion = "6.11.2"
+        var packageJson = require("./package.json")
+        var actualVersion = packageJson.engines.node;
+        if (actualVersion !== expectedVersion) {
             fail("Incorrect version of Node: expected " +
-                EXPECTED_NODE_VERSION +
+                expectedVersion +
                 ", but found version " +
                 actualVersion
             );
         }
-        console.log("Expected Node version found: " + EXPECTED_NODE_VERSION);
+        console.log("Expected Node version found: " + expectedVersion);
     });
 
 }());
