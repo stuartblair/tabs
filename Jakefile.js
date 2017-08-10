@@ -21,17 +21,10 @@
                 actualVersion
             );
         }
-        console.log("Expected Node version found: " + expectedVersion);
     });
 
     desc("Lint JavaScript code");
-    task("lint", function() {
+    task("lint", function () {
         process.stdout.write("Linting JavaScript: ");
-
-        jshint.checkFiles({
-            files: "Jakefile.js",
-            options: {},
-            globals: {} 
-        }, complete, fail);
-    }, { async: true });
+    });
 }());
