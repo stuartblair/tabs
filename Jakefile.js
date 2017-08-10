@@ -2,7 +2,6 @@
     "use strict";
 
     var semver = require("semver");
-    var jshint = require("simplebuild-jshint");
 
     desc("This is the default build");
     task("default", ["version", "lint"], function () {
