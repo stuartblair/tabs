@@ -1,3 +1,4 @@
+/* global desc, task, console, fail */
 (function () {
     "use strict";
 
