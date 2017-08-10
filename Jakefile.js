@@ -1,10 +1,10 @@
 (function () {
     "use strict";
 
-    let EXPECTED_NODE_VERSION = "v7.4.0"
+    let EXPECTED_NODE_VERSION = "v6.11.2"
 
     desc("This is the default build")
-    task("default", function () {
+    task("default", ["version"], function () {
         console.log("\n\nBUILD OK");
     });
 
