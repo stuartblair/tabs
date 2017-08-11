@@ -1,4 +1,4 @@
-/* global desc, task, console, fail */
+/* global jake, complete, desc, task, console, fail */
 (function () {
     "use strict";
 
@@ -26,5 +26,6 @@
     desc("Lint JavaScript code");
     task("lint", function () {
         process.stdout.write("Linting JavaScript: ");
-    });
+        jake.exec("node node_modules/.bin/eslint \"**/*.js\"", {interactive: true}, complete);
+    }, { async: true });
 }());
