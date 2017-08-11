@@ -4,10 +4,21 @@
 
     var semver = require("semver");
 
+    /* General tasks */
+
     desc("This is the default build");
     task("default", ["version", "lint"], function () {
         console.log("\n\nBUILD OK");
     });
+
+    desc("Run a localhost server");
+    task("run", function() {
+        console.log("Run http server");
+        jake.exec("node node_modules/httpserver/httpserver", { interactive: true }, complete);
+    });
+    /* Stuart - need to make sure there's an option to exec this in the context of the dir containing the html */
+
+    /* Supporting tasks */
 
     desc("Check Node version");
     task("version", function () {
