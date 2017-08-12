@@ -16,7 +16,6 @@
         console.log("Run http server");
         jake.exec("node node_modules/httpserver/httpserver", { interactive: true }, complete);
     });
-    /* Stuart - need to make sure there's an option to exec this in the context of the dir containing the html */
 
     /* Supporting tasks */
 
