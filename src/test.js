@@ -1,8 +1,8 @@
 (function() {
     'use strict';
-    var assert = require('chai').assert;
+    var expect = require('chai').expect;
 
-    assert.equal(add(2,3), 5);
+    expect(add(2,3)).to.equal(5);
 
     function add(a,b){ return a+b; }
 }());
