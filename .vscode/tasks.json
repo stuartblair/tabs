@@ -7,6 +7,14 @@
             "taskName": "node",
             "command": "node build.js",
             "type": "shell"
+        },
+        {
+            "type": "jake",
+            "task": "run",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
