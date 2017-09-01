@@ -15,6 +15,7 @@
   "devDependencies": {
     "chai": "^4.1.1",
     "eslint": "^4.4.1",
+    "eslint-plugin-chai-friendly": "^0.4.0",
     "http-server": "^0.10.0",
     "jake": "^8.0.15",
     "jshint": "^2.9.5",
